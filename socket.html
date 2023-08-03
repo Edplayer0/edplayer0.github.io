@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba de Socket.IO</title>
+	<!-- Agrega el CDN de Socket.IO en la sección de encabezado -->
+	<script src="https://cdn.socket.io/4.2.0/socket.io.min.js"></script>
+</head>
+<body>
+
+	<h1>Prueba de Socket.IO</h1>
+
+	<script>
+		// Conecta al servidor de Socket.IO
+		var socket = io.connect('https://tu-sitio-web.com');
+
+		// Verifica si Socket.IO está funcionando y muestra una alerta en caso de que lo esté
+		socket.on('connect', function() {
+			alert('Socket.IO está funcionando!');
+		});
+	</script>
+
+</body>
+</html>
