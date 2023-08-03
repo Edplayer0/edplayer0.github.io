@@ -3,22 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Título</title>
-    <script src="https://cdn.socket.io/3.1.0/socket.io.min.js"></script>
 </head>
 <body>
 <h1>It works!</h1>    
 <h2>Socket.io</h2>
-<script>
-document.write("F en el chat");
-var socket = io();
-
-socket.on('connect', function() {
-  alert('Socket.io está funcionando correctamente');
-});
-
-socket.on('disconnect', function() {
-  alert('Socket.io se ha desconectado');
-});
-</script>
 </body>
 </html>
