@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba de Pusher</title>
+	<!-- Agrega el CDN de Pusher en la sección de encabezado -->
+	<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+</head>
+<body>
+
+	<h1>Prueba de Pusher</h1>
+
+	<script>
+		// Conecta al servidor de Pusher
+		var pusher = new Pusher('1646185', {
+			key: 'f9742413a1f6c1dfbcde',
+			secret: 'ed950037bb0e26ae9f29',
+			cluster: 'us2',
+			encrypted: true
+		});
+
+		// Verifica si Pusher está funcionando y muestra un mensaje en la consola
+		pusher.connection.bind('connected', function() {
+			document.write('Pusher está funcionando!');
+		});
+	</script>
+
+</body>
+</html>
