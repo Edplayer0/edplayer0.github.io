@@ -1,0 +1,22 @@
+{
+  "name": "chated",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edplayer0/edplayer0.github.io.git"
+  },
+  "author": "Edplayer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edplayer0/edplayer0.github.io/issues"
+  },
+  "homepage": "https://github.com/Edplayer0/edplayer0.github.io#readme",
+  "dependencies": {
+    "pusher": "^5.1.3"
+  }
+}
