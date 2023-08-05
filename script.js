@@ -18,9 +18,11 @@ channel.bind('nuevo-mensaje', function(data) {
   chatMessages.appendChild(message);
 });
 
-// Enviar mensaje cuando se haga clic en el botón "Enviar"
-const sendButton = document.getElementById('send-button');
-sendButton.addEventListener('click', function() {
+// Enviar mensaje cuando se envíe el formulario
+const messageForm = document.getElementById('message-form');
+messageForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Evitar el envío del formulario
+
   const messageInput = document.getElementById('message-input');
   const message = messageInput.value;
 
