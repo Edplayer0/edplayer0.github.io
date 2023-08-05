@@ -1,5 +1,5 @@
 // Inicializar conexión con Pusher
-const pusher = new Pusher({
+const pusher = new Pusher('f9742413a1f6c1dfbcde', {
   appId: '1646185',
   key: 'f9742413a1f6c1dfbcde',
   secret: 'ed950037bb0e26ae9f29',
