@@ -1,6 +1,9 @@
 // Inicializar conexión con Pusher
-const pusher = new Pusher('YOUR_APP_KEY', {
-  cluster: 'YOUR_CLUSTER',
+const pusher = new Pusher({
+  appId: '1646185',
+  key: 'f9742413a1f6c1dfbcde',
+  secret: 'ed950037bb0e26ae9f29',
+  cluster: 'us2',
   encrypted: true
 });
 
@@ -24,6 +27,7 @@ messageForm.addEventListener('submit', function(event) {
   const message = messageInput.value;
 
   // Enviar mensaje al evento 'nuevo-mensaje' del canal 'chat-channel'
-  pusher.trigger('chat-channel', 'nuevo-mensaje', { message });
+  pusher.trigger('chat-channel', 'nuevo-mensaje', { message: message });
 
   messageInput.value = '';
+});
