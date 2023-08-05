@@ -20,14 +20,16 @@ channel.bind('nuevo-mensaje', function(data) {
 
 // Enviar mensaje cuando se envíe el formulario
 const messageForm = document.getElementById('message-form');
+const messageInput = document.getElementById('message-input');
+
 messageForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Evitar el envío del formulario
 
-  const messageInput = document.getElementById('message-input');
-  const message = messageInput.value;
-
-  // Enviar mensaje al evento 'nuevo-mensaje' del canal 'chat-channel'
-  pusher.trigger('chat-channel', 'nuevo-mensaje', { message: message });
+  const message = messageInput.value.trim();
+  if (message !== '') {
+    // Enviar mensaje al evento 'nuevo-mensaje' del canal 'chat-channel'
+    pusher.trigger('chat-channel', 'nuevo-mensaje', { message: message });
+  }
 
   messageInput.value = '';
 });
