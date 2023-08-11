@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chat en tiempo real</title>
-  <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('datos.json')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    var url = data.url;
+                    window.location.href = url;
+                })
+                .catch(function(error) {
+                    console.log('Error al obtener el archivo JSON:', error);
+                });
+        });
+    </script>
 </head>
 <body>
-  <div id="chat-messages"></div>
-  <form id="message-form">
-    <input type="text" id="message-input" placeholder="Escribe un mensaje">
-    <input type="submit" value="Enviar">
-  </form>
-
-  <script src="script.js"></script>
+    <h1>Redirecting...</h1>
+    <p>Please wait while you are being redirected.</p>
 </body>
 </html>
