@@ -1,0 +1,153 @@
+* {
+    --main-color: #ff5;
+    --bg-color: #ddd;
+}
+
+body {
+    margin: 0;
+    font-family: montserrat;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- HEADER ----- */
+
+.header {
+    background-color: #48e;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
+
+.header__title {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-wrap: nowrap;
+    animation: header_writing 4s both steps(32);
+}
+
+
+/* ----- MENU ----- */
+
+.side-menu {
+    background-color: #fff;
+    width: fit-content;
+    height: calc(100dvh - 70px);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+    justify-content: start;
+    align-items: right;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.list__item {
+    user-select: none;
+    border-radius: 15px 0 0 15px;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    text-align: left;
+    z-index: 10;
+    margin: 10px 0 10px 3px;
+}
+
+.list__item:first-child {
+    justify-content: center;
+}
+
+.list__item:hover::before, .list__item:hover::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    right: 0;
+    z-index: -1;
+}
+
+.list__item:hover::before {
+    top: -20px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 4px 4px 5px var(--bg-color);
+    
+}
+.list__item:hover::after {
+    bottom: -20px;
+    border-top-right-radius: 10px;
+    box-shadow: 4px -4px 5px var(--bg-color);
+}
+
+.list__item a span{
+    margin-right: 10px;
+    margin-left: 0;
+    padding: 0;
+}
+
+/* LINKS HIDDEN */
+
+.list__item a {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    padding: 10px;
+    padding-left: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #111;
+}
+
+/* LINKS SHOWN */
+
+.side-menu:has(input[type="checkbox"]:checked)  .list__item a {
+    width: 100%;
+}
+
+.item--menu label{
+    width: 100%;
+    text-align: center;
+    padding: 7px 0;
+}
+
+.item--settings {
+    margin-top: auto;
+}
+
+.list__item:hover {
+    background-color: var(--bg-color);
+}
+
+#open-menu {
+    display: none;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes header_writing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 430px;
+    }
+}
