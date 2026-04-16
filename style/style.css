@@ -202,7 +202,7 @@ body {
 
 /* ----- MAIN ----- */
 
-main {
+.sections__container {
     overflow-y: scroll;
     height: 100%;
     scrollbar-color: var(--text-color) var(--bg-color);
@@ -377,4 +377,20 @@ main {
 .projects__item:last-child {
     grid-area: "numchat";
     grid-column: 1 / span 2;
+}
+
+/* ----- FOOTER ----- */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--box-color);
+    box-sizing: border-box;
+}
+
+.footer__content {
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    letter-spacing: 2px;
 }
