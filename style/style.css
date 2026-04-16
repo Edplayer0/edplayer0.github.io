@@ -278,6 +278,11 @@ main {
     align-items: center;
 }
 
+.skills__content {
+    margin: 20px;
+    margin-top: 0;
+}
+
 .skills__wrapper {
     margin-top: auto;
     margin-bottom: 10px;
@@ -325,3 +330,51 @@ main {
     width: 40%;
 }
 
+/* ----- PROJECTS ----- */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.projects__list {
+    margin: 0;
+    margin-top: auto;
+    display: grid;
+    list-style: none;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "noted blueonda"
+    "numchat numchat";
+    gap: 10px;
+    width: 100%;
+}
+
+.projects__item {
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    background-image: conic-gradient(var(--text-color), #040);
+    color: #fff;
+    font-weight: bold;
+}
+
+.projects__item:hover {
+    outline: 2px solid var(--text-color);
+}
+
+.projects__item:first-child {
+    grid-area: "noted";
+}
+
+.projects__item:nth-child(2) {
+    grid-area: "blueonda";
+}
+
+.projects__item:last-child {
+    grid-area: "numchat";
+    grid-column: 1 / span 2;
+}
