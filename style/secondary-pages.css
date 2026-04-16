@@ -1,3 +1,5 @@
+/* ----- HEADER ----- */
+
 .header {
     background-color: var(--box-color);
     color: var(--text-color);
@@ -59,6 +61,8 @@
 .header__button:hover::before {
     left: 0;
 }
+
+/* ----- DEFAULT BOX ----- */
 
 .box {
     background-color: var(--box-color);
@@ -127,6 +131,36 @@
 
 .box__images:nth-of-type(3) img {
     max-width: 70%;
+}
+
+/* ----- CONTACT ----- */
+
+.contact .contact__title {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contact ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contact__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+    border-left: 5px solid transparent;
+}
+
+.contact__link:hover {
+    border-color: var(--text-color);
 }
 
 /* ----- ANIMATIONS ----- */
