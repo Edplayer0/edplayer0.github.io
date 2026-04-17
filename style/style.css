@@ -12,6 +12,8 @@ body {
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
+    scrollbar-color: var(--text-color) transparent;
+    scroll-behavior: smooth;
 }
 
 /* ----- HEADER ----- */
@@ -27,9 +29,7 @@ body {
     box-sizing: border-box;
     padding: 10px;
     padding-left: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+    position: relative;
 }
 
 .header::before {
@@ -59,7 +59,7 @@ body {
 
 .box {
     background-color: var(--box-color);
-    width: clamp(400px, 70%, 900px);
+    width: clamp(360px, 80%, 900px);
     margin: 40px auto;
     color: var(--text-color);
     text-align: center;
@@ -68,4 +68,13 @@ body {
     border-top: 3px solid var(--text-color);
     padding: 20px;
     animation: box-appear 1s both;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+
+@media screen and (max-width: 410px) {
+    .box {
+        border-radius: 0;
+    }
 }

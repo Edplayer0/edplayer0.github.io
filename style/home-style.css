@@ -96,6 +96,7 @@
 .main-wrapper {
     display: flex;
     height: calc(100dvh - 70px);
+    overflow: hidden;
 }
 
 
@@ -108,12 +109,14 @@
     padding: 0;
     box-sizing: border-box;
     transition: width 0.6s;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu__list {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: inherit;
     padding: 0;
     margin: 0;
     padding-top: 20px;
@@ -204,6 +207,67 @@
     display: none;
 }
 
+/* ----- MOBILE MENU ----- */
+
+#mobile-menu__checkbox {
+    display: none;
+}
+
+.header__mobile-menu {
+    display: none !important;
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
+} 
+
+.mobile-menu {
+    position: absolute;
+    right: 0;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    margin-top: 3px;
+    border-radius: 0 0 0 7px;
+    z-index: 10;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.7s;
+}
+
+.mobile-menu:has(input[type="checkbox"]:checked) {
+    height: 208px;
+}
+
+.mobile-menu__list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--box-color);
+    flex-direction: inherit;
+}
+
+.mobile-menu__item {
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px;
+    margin: 0;
+}
 
 
 /* ----- MAIN ----- */
@@ -383,4 +447,29 @@
     margin: 0;
     padding: 20px;
     letter-spacing: 2px;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media screen and (max-width: 480px) {
+    .header__button{
+        display: none;
+    }
+
+    .header__mobile-menu {
+        display: block !important;
+    }
+
+
+    .side-menu {
+        display: none;
+    }
+
+
+    .main-wrapper {
+        height: 100%;
+        overflow: auto;
+        align-items: center;
+        flex-direction: column;
+    }
 }

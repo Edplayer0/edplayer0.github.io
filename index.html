@@ -26,6 +26,11 @@
         <h4>Software Developer</h4>
       </div>
       <button class="header__button">Hire Me</button>
+      <label
+        class="material-icons header__mobile-menu"
+        for="mobile-menu__checkbox"
+        >menu</label
+      >
     </header>
 
     <div class="main-wrapper">
@@ -62,8 +67,36 @@
         </ul>
       </nav>
 
+      <!-- mobile MENU -->
+      <nav class="mobile-menu">
+        <input type="checkbox" id="mobile-menu__checkbox" />
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="#skills" class="mobile-menu__link"
+              ><span class="material-icons">bolt</span>Skills</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#projects" class="mobile-menu__link"
+              ><span class="material-icons">folder</span>Projects</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="contact.html" class="mobile-menu__link"
+              ><span class="material-icons">message</span>Contact</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="about.html" class="mobile-menu__link"
+              ><span class="material-icons">info</span>About Me</a
+            >
+          </li>
+        </ul>
+      </nav>
+
       <div class="sections__container">
         <main>
+          <!-- SUMARY -->
           <section class="box summary">
             <h1 class="summary__title">Hello World</h1>
             <h2 class="summary__subtitle">Who I am?</h2>
