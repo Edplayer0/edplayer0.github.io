@@ -21,7 +21,7 @@
 }
 
 .header__title h4 {
-    font-weight: 100;
+    font-weight: 200;
     position: relative;
     overflow: hidden;
 }
@@ -280,7 +280,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     scroll-behavior: smooth;
 }
 
-/* ----- BOX ----- */
+/* ----- SUMMARY ----- */
 
 .summary {
     animation: summary-appear 1s both;
@@ -407,8 +407,14 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     width: 100%;
 }
 
-.projects__item {
+.projects__link {
     padding: 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.projects__item {
     display: inline-block;
     text-align: center;
     background-image: conic-gradient(var(--text-color), #040);
@@ -436,6 +442,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 /* ----- FOOTER ----- */
 
 .footer {
+    margin-top: auto;
     width: 100%;
     text-align: center;
     background-color: var(--box-color);
@@ -446,7 +453,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     color: var(--text-color);
     margin: 0;
     padding: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* ----- MEDIA QUERIES ----- */
