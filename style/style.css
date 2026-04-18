@@ -44,6 +44,23 @@ body {
     animation: header-border-appear 1s cubic-bezier(.55,.09,.68,.53) both;
 }
 
+/* ----- FOOTER ----- */
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: var(--box-color);
+    box-sizing: border-box;
+}
+
+.footer__content {
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    letter-spacing: 1px;
+}
+
 /* ----- ANIMATIONS ----- */
 
 @keyframes header-border-appear {

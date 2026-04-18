@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 /* ----- HEADER ----- */
 
 .header__title {
@@ -39,6 +45,8 @@
 .header__button:hover::before {
     left: 0;
 }
+
+/* ----- BOX ----- */
 
 .box h2 {
     text-decoration: underline;

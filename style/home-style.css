@@ -439,23 +439,6 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     grid-column: 1 / span 2;
 }
 
-/* ----- FOOTER ----- */
-
-.footer {
-    margin-top: auto;
-    width: 100%;
-    text-align: center;
-    background-color: var(--box-color);
-    box-sizing: border-box;
-}
-
-.footer__content {
-    color: var(--text-color);
-    margin: 0;
-    padding: 20px;
-    letter-spacing: 1px;
-}
-
 /* ----- MEDIA QUERIES ----- */
 
 @media screen and (max-width: 480px) {
