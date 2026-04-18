@@ -80,6 +80,7 @@ body {
     margin-left: auto;
     display: inline;
     padding: 0;
+    text-wrap: nowrap;
 }
 
 
