@@ -375,21 +375,6 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     box-sizing: border-box;
 }
 
-.skill__container:first-of-type .skill__bar {
-    width: 90%;
-}
-.skill__container:nth-of-type(2) .skill__bar {
-    width: 50%;
-}
-.skill__container:nth-of-type(3) .skill__bar {
-    width: 70%;
-}
-.skill__container:nth-of-type(4) .skill__bar {
-    width: 60%;
-}
-.skill__container:nth-of-type(5) .skill__bar {
-    width: 40%;
-}
 
 /* ----- PROJECTS ----- */
 

@@ -48,11 +48,11 @@ body {
 
 /* ----- BOX ----- */
 
-.box h2 {
+.box .underline {
     text-decoration: underline;
 }
 
-.box h3 {
+.icon__header {
     display: flex;
     justify-content: center;
     align-items: center;
