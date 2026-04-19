@@ -1,4 +1,4 @@
-/* fallback */
+/* material icons */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -20,4 +20,25 @@
   direction: ltr;
   -moz-font-feature-settings: 'liga';
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Montserrat */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/Montserrat-ExtraLight.ttf) format('truetype');
 }
