@@ -37,40 +37,6 @@
     animation: header-h4-appear 1s both;
 }
 
-.header__button {
-    background-color: transparent;
-    border: 3px solid var(--text-color);
-    border-radius: 7px;
-    padding: 8px 10px;
-    color: var(--text-color);
-    filter: brightness(5);
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.5s;
-    font-size: 15px;
-}
-
-.header__button::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--text-color);
-    left:-100%;
-    top: 0;
-    transition: left .5s;
-    z-index: -1;
-}
-
-.header__button:hover {
-    color: #fff;
-}
-
-.header__button:hover::before {
-    left: 0;
-}
-
 
 /* ANIMATIONS */
 
@@ -149,7 +115,7 @@
     
 }
 
-.list__item:hover::before, .list__item:hover::after {
+.list__item:hover::after {
     content: "";
     position: absolute;
     height: 20px;
@@ -160,7 +126,7 @@
 }
 
 
-.list__item a span{
+.list__item span{
     margin-right: 11px;
     margin-left: 0;
     padding: 0;
@@ -172,8 +138,113 @@
     padding: 7px 0;
 }
 
+/* ----- SETTINGS -----  */
+
 .item--settings {
     margin-top: auto;
+    position: relative;
+}
+
+.item--settings label {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    padding: 10px;
+    padding-left: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+/* ----- SETTINGS MENU ----- */
+.item--settings input {
+    display: none;
+}
+
+.menu-settings {
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0 #0006;
+    border-right: 3px solid var(--text-color);
+    display: none;
+}
+
+.settings__list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings__item {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings__item label {
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+
+.settings__item label:hover {
+    color: var(--text-color);
+}
+
+.settings__toggle {
+    width: 50px;
+    height: 20px;
+    border: 2px solid #bbb;
+    border-radius: 13px;
+    position: relative;
+    padding: 2px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.settings__toggle::before {
+    content: "";
+    padding: 10px;
+    position: absolute;
+    background-color: #bbb;
+    border-radius: 100%;
+    transition: right 0.5s;
+    right: 32px;
+    /* box-shadow: 0 0 15px 0 #999; */
+}
+
+.settings__toggle:has(input[type="checkbox"]:checked)::before {
+    background-color: var(--text-color);
+    right: 2px;
+} 
+
+.item--settings:has(#open-settings:checked) .menu-settings {
+    display: block;
+    animation: settings-appear 0.7s both;
+}
+
+@keyframes settings-appear {
+    from {
+        translate: 0 50px;
+        opacity: 0.6;
+    }
+    to {
+        translate: 0;
+        opacity: 1;
+    }
+    
 }
 
 /* LINKS HIDDEN */
@@ -192,15 +263,14 @@
 
 /* LINKS SHOWN */
 
-.side-menu:has(input[type="checkbox"]:checked) {
+.side-menu:has(#open-menu:checked) {
     width: 140px;
 }
 
-.side-menu:has(input[type="checkbox"]:checked) .list__item:hover::after {
+.side-menu:has(#open-menu:checked) .list__item:hover::after {
     bottom: -20px;
     border-top-right-radius: 10px;
     box-shadow: 4px -4px 2px var(--bg-color);
-    
 }
 
 #open-menu {
@@ -282,10 +352,6 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 
 /* ----- SUMMARY ----- */
 
-.summary {
-    animation: summary-appear 1s both;
-}
-
 .summary__title {
     display: inline;
 }
@@ -301,18 +367,6 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     animation: arrow-movement 1s infinite alternate both;
 }
 
-/* ----- ANIMATIONS ----- */
-
-@keyframes summary-appear {
-    from {
-        opacity: 0;
-        translate: 60px;
-    }
-    to {
-        opacity: 1;
-        translate: 0;
-    }
-}
 
 @keyframes arrow-movement {
     from {
@@ -409,7 +463,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 .projects__item {
     display: inline-block;
     text-align: center;
-    background-image: conic-gradient(var(--text-color), #040);
+    background-image: conic-gradient(var(--text-color), #111);
     color: #fff;
     font-weight: bold;
 }

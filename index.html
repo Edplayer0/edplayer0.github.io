@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <script src="script/darkmode-detect.js"></script>
     <link rel="stylesheet" href="style/home-style.css" />
     <link href="style/fonts.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="icon.svg" />
@@ -55,12 +56,29 @@
           </li>
 
           <li class="list__item item--settings">
-            <a><span class="material-icons">settings</span>Config</a>
+            <input type="checkbox" id="open-settings" />
+            <label for="open-settings"
+              ><span class="material-icons">settings</span>Config</label
+            >
+
+            <!-- SETTINGS MENU -->
+            <div class="menu-settings">
+              <ul class="settings__list">
+                <li class="settings__item">
+                  <label for="dark-mode">
+                    <span class="material-icons">dark_mode</span>
+                    <div class="settings__toggle">
+                      <input id="dark-mode" type="checkbox" />
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </nav>
 
-      <!-- mobile MENU -->
+      <!-- MOBILE MENU -->
       <nav class="mobile-menu">
         <input type="checkbox" id="mobile-menu__checkbox" />
         <ul class="mobile-menu__list">
@@ -203,5 +221,6 @@
         </footer>
       </div>
     </div>
+    <script src="script/darkmode-setter.js"></script>
   </body>
 </html>
