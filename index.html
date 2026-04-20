@@ -12,6 +12,20 @@
     <title>Edgar A.M | Developer</title>
   </head>
   <body>
+    <!-- SETTINGS MENU -->
+    <div class="menu-settings">
+      <ul class="settings__list">
+        <li class="settings__item">
+          <label for="dark-mode" class="settings__label">
+            <span class="material-icons">dark_mode</span>
+            <div class="settings__toggle">
+              <input id="dark-mode" type="checkbox" />
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+
     <!-- UP BUTTON -->
     <a href="#" class="material-icons up-button">arrow_upward</a>
 
@@ -61,22 +75,8 @@
           <li class="list__item item--settings">
             <input type="checkbox" id="open-settings" />
             <label for="open-settings"
-              ><span class="material-icons">settings</span>Config</label
+              ><span class="material-icons">settings</span>Settings</label
             >
-
-            <!-- SETTINGS MENU -->
-            <div class="menu-settings">
-              <ul class="settings__list">
-                <li class="settings__item">
-                  <label for="dark-mode">
-                    <span class="material-icons">dark_mode</span>
-                    <div class="settings__toggle">
-                      <input id="dark-mode" type="checkbox" />
-                    </div>
-                  </label>
-                </li>
-              </ul>
-            </div>
           </li>
         </ul>
       </nav>
@@ -104,6 +104,12 @@
             <a href="about.html" class="mobile-menu__link"
               ><span class="material-icons">info</span>About Me</a
             >
+          </li>
+          <li class="mobile-menu__item">
+            <label class="mobile-menu__link" for="settings-mobile"
+              ><span class="material-icons">settings</span>Settings</label
+            >
+            <input type="checkbox" id="settings-mobile" />
           </li>
         </ul>
       </nav>
@@ -211,7 +217,6 @@
                   target="_blank"
                   rel="noreferrer noopener"
                   href="https://github.com/Edplayer0/NumChat"
-                  class="projects__link"
                   class="projects__link"
                   >NumChat</a
                 >

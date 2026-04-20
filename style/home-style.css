@@ -178,6 +178,11 @@
     box-shadow: 0 0 15px 0 #0006;
     border-right: 3px solid var(--text-color);
     display: none;
+    z-index: 30;
+}
+
+.menu-settings input {
+    display: none;
 }
 
 .settings__list {
@@ -197,13 +202,13 @@
     align-items: center;
 }
 
-.settings__item label {
-    padding: 0;
-    margin: 0;
-    color: #000;
+.settings__label {
+    display: flex;
+    margin: 5px 0;
+    gap: 5px;
 }
 
-.settings__item label:hover {
+.settings__label:hover {
     color: var(--text-color);
 }
 
@@ -234,9 +239,12 @@
     right: 2px;
 } 
 
-.item--settings:has(#open-settings:checked) .menu-settings {
+/* open settings from side-bar */
+body:has(#open-settings:checked) .menu-settings {
     display: block;
     animation: settings-appear 0.7s both;
+    bottom: 40px;
+    left: 50px;
 }
 
 @keyframes settings-appear {
@@ -317,8 +325,8 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     z-index: 10;
 }
 
-.mobile-menu:has(input[type="checkbox"]:checked) {
-    height: 208px;
+.mobile-menu:has(#mobile-menu__checkbox:checked) {
+    height: 240px;
     border-bottom: 3px solid var(--text-color);
 }
 
@@ -345,6 +353,18 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     color: #222;
     padding: 10px 15px;
     margin: 0;
+}
+
+/* ----- MOVILE MENU SETTINGS ----- */
+
+#settings-mobile {
+    display: none;
+}
+
+/* open settings from mobile menu */
+body:has(#settings-mobile:checked) .menu-settings {
+    display: block;
+    animation: settings-appear 1s;
 }
 
 
