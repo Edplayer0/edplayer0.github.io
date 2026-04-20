@@ -2,6 +2,10 @@
 
 /* ----- HEADER ----- */
 
+.header {
+    z-index: 20;
+}
+
 .header__title {
     color: var(--text-color);
     margin: 0;
@@ -289,6 +293,7 @@
     background-color: transparent;
     padding: 20px;
     transition: transform 0.3s;
+    user-select: none;
 }
 
 body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
@@ -303,15 +308,18 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     background-color: #fff;
     flex-direction: column;
     margin-top: 3px;
-    border-radius: 0 0 0 7px;
+    border-radius: 0 0 0 8px;
     z-index: 10;
     height: 0px;
     overflow: hidden;
     transition: height 0.7s;
+    box-shadow: 0 0 15px 0 #0006;
+    z-index: 10;
 }
 
 .mobile-menu:has(input[type="checkbox"]:checked) {
     height: 208px;
+    border-bottom: 3px solid var(--text-color);
 }
 
 .mobile-menu__list {
@@ -334,7 +342,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-    color: inherit;
+    color: #222;
     padding: 10px 15px;
     margin: 0;
 }
@@ -345,7 +353,6 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 .sections__container {
     overflow-y: scroll;
     height: 100%;
-    scrollbar-color: var(--text-color) var(--bg-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -487,7 +494,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 
 /* ----- MEDIA QUERIES ----- */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
     .header__button{
         display: none;
     }
