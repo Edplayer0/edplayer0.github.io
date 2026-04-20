@@ -112,7 +112,7 @@ p {
 }
 
 .header__button:hover {
-    color: #fff;
+    color: var(--box-color);
 }
 .header__button:hover::before {
     left: 0;
