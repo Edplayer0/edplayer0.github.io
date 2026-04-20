@@ -1,17 +1,17 @@
 /* ----- COMMON STYLES ----- */
 
 :root {
-    --bg-color: #ccc;
-    --text-color: #008800;
-    --box-color: #f3f3f3;
+    --bg-color: #B7E4C7;
+    --text-color: #1B4332;
+    --box-color: #D8F3DC;
     scroll-behavior: smooth;
     scrollbar-color: var(--text-color) transparent;
 }
 
 :root.dark {
-    --bg-color: #151515;
-    --text-color: #0d0;
-    --box-color: #0a0a0a;
+    --bg-color: #40916C;
+    --text-color: #D8F3DC;
+    --box-color: #1B4332;
 }
 
 .box, .header, body {
@@ -26,24 +26,29 @@ body {
     flex-direction: column;
 }
 
+svg, g, path {
+    fill: var(--text-color);
+}
+
 p {
     text-wrap-style: pretty;
 }
 
 /* ----- FLOATING UP BUTTON ----- */
 .up-button {
-    background-color: var(--text-color);
+    background-color: var(--box-color);
     width: min-content;
     height: min-content;
     padding: 8px;
     border-radius: 50%;
-    color: #fff;
+    color: var(--text-color);
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 10;
     user-select: none;
     text-decoration: none;
+    box-shadow: 0 0 15px 0 #0006;
 }
 
 .up-button:hover {

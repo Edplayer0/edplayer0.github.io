@@ -215,23 +215,23 @@
 .settings__toggle {
     width: 50px;
     height: 20px;
-    border: 2px solid #bbb;
+    border: 2px solid var(--text-color);
     border-radius: 13px;
     position: relative;
     padding: 2px;
     overflow: hidden;
-    background-color: #eee;
+    background-color: var(--bg-color);
 }
 
 .settings__toggle::before {
     content: "";
     padding: 10px;
     position: absolute;
-    background-color: #bbb;
+    background-color: var(--text-color);
     border-radius: 100%;
     transition: right 0.5s;
     right: 32px;
-    /* box-shadow: 0 0 15px 0 #999; */
+    box-shadow: 0 0 15px 0 #0006;
 }
 
 .settings__toggle:has(input[type="checkbox"]:checked)::before {
@@ -417,7 +417,7 @@ body:has(#settings-mobile:checked) .menu-settings {
     color: inherit
 }
 .skills__info:hover {
-    color: #fff;
+    color: var(--bg-color);
 }
 
 .skills__content {
@@ -450,7 +450,7 @@ body:has(#settings-mobile:checked) .menu-settings {
     background-color: var(--text-color);
     padding: 12px;
     border-radius: 7px;
-    color: #fff;
+    color: var(--box-color);
     text-align: left;
     font-weight: bold;
     box-sizing: border-box;
@@ -490,7 +490,7 @@ body:has(#settings-mobile:checked) .menu-settings {
 .projects__item {
     display: inline-block;
     text-align: center;
-    background-image: conic-gradient(var(--text-color), #111);
+    background-image: conic-gradient(var(--text-color), var(--bg-color));
     color: #fff;
     font-weight: bold;
 }
