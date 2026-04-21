@@ -73,7 +73,7 @@
 /* ----- MENU ----- */
 
 .side-menu {
-    background-color: #fff;
+    background-color: #efe;
     width: 48px;
     height: calc(100dvh - 70px);
     padding: 0;
@@ -173,7 +173,7 @@
     position: absolute;
     left: 50%;
     bottom: 50%;
-    background-color: #fff;
+    background-color: var(--box-color);
     border-radius: 8px;
     box-shadow: 0 0 15px 0 #0006;
     border-right: 3px solid var(--text-color);
@@ -206,10 +206,11 @@
     display: flex;
     margin: 5px 0;
     gap: 5px;
+    color: var(--text-color)
 }
 
 .settings__label:hover {
-    color: var(--text-color);
+    filter: opacity(0.7)
 }
 
 .settings__toggle {
@@ -313,7 +314,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     position: absolute;
     right: 0;
     display: flex;
-    background-color: #fff;
+    background-color: #efe;
     flex-direction: column;
     margin-top: 3px;
     border-radius: 0 0 0 8px;
@@ -485,6 +486,7 @@ body:has(#settings-mobile:checked) .menu-settings {
     display: block;
     color: #fff;
     text-decoration: none;
+    backdrop-filter: brightness(0.9);
 }
 
 .projects__item {
