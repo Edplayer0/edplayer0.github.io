@@ -141,27 +141,25 @@ p {
 
 .box {
     background-color: var(--box-color);
-    width: clamp(360px, 80%, 900px);
+    width: 100%;
     margin: 40px auto;
     color: var(--text-color);
     text-align: center;
-    border-radius: 8px;
     box-sizing: border-box;
     border-top: 3px solid var(--text-color);
-    padding: 20px;
+    padding: 20px 10px;
     animation: box-appear 1s both;
+    box-shadow: 0 6px 15px 0 #0007;
 }
 
 /* ----- MEDIA QUERIES ----- */
 
 
-@media screen and (max-width: 410px) {
+@media screen and (min-width: 480px) {
     .box {
-        border-radius: 0;
+        border-radius: 8px;
+        width: clamp(360px, 80%, 900px);
     }
-}
-
-@media screen and (min-width: 520px) {
     .up-button {
         display: none !important;
     }
