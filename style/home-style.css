@@ -173,7 +173,16 @@
     display: none;
 }
 
-.menu-settings {
+#settings__background {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    background-color: transparent;
+}
+
+.settings__menu {
     width: 120px;
     height: 150px;
     position: absolute;
@@ -183,11 +192,10 @@
     border-radius: 8px;
     box-shadow: 0 0 15px 0 #0006;
     border-right: 3px solid var(--text-color);
-    display: none;
-    z-index: 30;
+    z-index: 40;
 }
 
-.menu-settings input {
+.settings__menu input {
     display: none;
 }
 
@@ -212,7 +220,8 @@
     display: flex;
     margin: 5px 0;
     gap: 5px;
-    color: var(--text-color)
+    color: var(--text-color);
+    user-select: none;
 }
 
 .settings__label:hover {
@@ -247,8 +256,11 @@
 } 
 
 /* open settings from side-bar */
-body:has(#open-settings:checked) .menu-settings {
+body:has(#open-settings:checked) #settings__background {
     display: block;
+}
+
+body:has(#open-settings:checked) .settings__menu {
     animation: settings-appear 0.7s both;
     bottom: 40px;
     left: 50px;
@@ -368,8 +380,12 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 }
 
 /* open settings from mobile menu */
-body:has(#settings-mobile:checked) .menu-settings {
+
+body:has(#settings-mobile:checked) #settings__background {
     display: block;
+}
+
+body:has(#settings-mobile:checked) .settings__menu {
     animation: settings-appear 1s;
 }
 
