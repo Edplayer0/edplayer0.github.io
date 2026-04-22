@@ -31,8 +31,10 @@ svg, g, path {
     fill: var(--text-color);
 }
 
-p {
-    text-wrap-style: pretty;
+@supports (text-wrap-style: pretty) {
+    p {
+        text-wrap-style: pretty;
+    }
 }
 
 /* ----- FLOATING UP BUTTON ----- */
@@ -44,8 +46,8 @@ p {
     border-radius: 50%;
     color: var(--text-color);
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5%;
+    right: 5%;
     z-index: 10;
     user-select: none;
     text-decoration: none;

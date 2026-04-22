@@ -402,7 +402,7 @@ body:has(#settings-mobile:checked) .settings__menu {
 /* ----- SUMMARY ----- */
 
 .summary__title {
-    display: inline;
+    margin: 0;
 }
 
 .summary__content {
@@ -412,15 +412,12 @@ body:has(#settings-mobile:checked) .settings__menu {
 
 .summary__arrow {
     margin-top: auto;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     animation: arrow-movement 1s infinite alternate both;
 }
 
 
 @keyframes arrow-movement {
-    from {
-        translate: 0;
-    }
     to {
         translate: 0 20px;
     }
@@ -428,16 +425,11 @@ body:has(#settings-mobile:checked) .settings__menu {
 
 /* ----- SKILLS ----- */
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .skills__info {
     text-decoration: none;
     color: inherit
 }
+
 .skills__info:hover {
     color: var(--bg-color);
 }
@@ -482,9 +474,6 @@ body:has(#settings-mobile:checked) .settings__menu {
 /* ----- PROJECTS ----- */
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
     padding-top: 0;
 }
@@ -496,7 +485,8 @@ body:has(#settings-mobile:checked) .settings__menu {
     list-style: none;
     padding: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "noted blueonda"
+    grid-template-areas: 
+    "noted blueonda"
     "numchat numchat";
     gap: 10px;
     width: 100%;
@@ -520,19 +510,6 @@ body:has(#settings-mobile:checked) .settings__menu {
 
 .projects__item:hover {
     outline: 2px solid var(--text-color);
-}
-
-.projects__item:first-child {
-    grid-area: "noted";
-}
-
-.projects__item:nth-child(2) {
-    grid-area: "blueonda";
-}
-
-.projects__item:last-child {
-    grid-area: "numchat";
-    grid-column: 1 / span 2;
 }
 
 /* ----- MEDIA QUERIES ----- */
