@@ -430,6 +430,10 @@ body:has(#settings-mobile:checked) .settings__menu {
     color: inherit
 }
 
+.skills__title {
+    margin-top: 0;
+}
+
 .skills__info:hover {
     color: var(--bg-color);
 }

@@ -18,6 +18,10 @@
     transition: color 0.5s, background-color 0.5s;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
     margin: 0;
     font-family: Montserrat;
@@ -149,7 +153,7 @@ svg, g, path {
     text-align: center;
     box-sizing: border-box;
     border-top: 3px solid var(--text-color);
-    padding: 20px 10px;
+    padding: 1.5rem 1rem;
     animation: box-appear 1s both;
     box-shadow: 0 6px 15px 0 #0007;
 }
