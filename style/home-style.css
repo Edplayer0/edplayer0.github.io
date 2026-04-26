@@ -491,9 +491,9 @@ body:has(#settings-mobile:checked) .settings__menu {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 50px;
     grid-template-areas: 
+    "personal-page personal-page"
     "noted blueonda"
-    "noted numchat"
-    "personal-page personal-page";
+    "numchat numchat";
     gap: 10px;
     width: 100%;
 }
@@ -507,6 +507,8 @@ body:has(#settings-mobile:checked) .settings__menu {
     position: relative;
     top: 0;
     display: block;
+    perspective: 200px;
+    overflow: clip;
 }
 
 .project__title {
@@ -520,6 +522,8 @@ body:has(#settings-mobile:checked) .settings__menu {
     place-content: center;
     padding: 0;
     margin: 0;
+    z-index: 20;
+    position: absolute;
 }
 
 .projects__card {
@@ -534,15 +538,17 @@ body:has(#settings-mobile:checked) .settings__menu {
     display: grid;
     place-content: center;
     font-size: 0.8rem;
+    color: var(--text-color);
 }
 
 .projects__link:hover > .project__title {
-    transform: rotateX(-90deg);
+    transform: rotateX(90deg);
     translate: 0 -50%;
 }
 .projects__link:hover > .projects__card {
     transform: rotateX(0deg);
     translate: 0;
+    z-index: 30;
 }
 
 
