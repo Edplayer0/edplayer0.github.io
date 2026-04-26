@@ -489,11 +489,11 @@ body:has(#settings-mobile:checked) .settings__menu {
     list-style: none;
     padding: 0;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 60px;
+    grid-auto-rows: 50px;
     grid-template-areas: 
-    "personal-page personal-page"
     "noted blueonda"
-    "numchat numchat";
+    "noted numchat"
+    "personal-page personal-page";
     gap: 10px;
     width: 100%;
 }
@@ -514,8 +514,8 @@ body:has(#settings-mobile:checked) .settings__menu {
     width: 100%;
     height: 100%;
     display: block;
-    transition: transform 0.5s, translate 0.5s;
-    backdrop-filter: brightness(0.9);
+    transition: transform 0.5s, translate 0.7s;
+    backdrop-filter: brightness(0.8);
     display: grid;
     place-content: center;
     padding: 0;
@@ -530,14 +530,14 @@ body:has(#settings-mobile:checked) .settings__menu {
     bottom: 0;
     transform: rotateX(-90deg);
     translate: 0 50%;
-    transition: transform 0.5s, translate 0.5s;
+    transition: transform 0.5s, translate 0.7s;
     display: grid;
     place-content: center;
     font-size: 0.8rem;
 }
 
 .projects__link:hover > .project__title {
-    transform: rotateX(90deg);
+    transform: rotateX(-90deg);
     translate: 0 -50%;
 }
 .projects__link:hover > .projects__card {
