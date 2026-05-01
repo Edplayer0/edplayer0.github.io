@@ -493,9 +493,9 @@ body:has(#settings-mobile:checked) .settings__menu {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 50px;
     grid-template-areas: 
-    "personal-page personal-page"
     "noted blueonda"
-    "numchat numchat";
+    "personal-page personal-page"
+    "numchat tictactoe";
     gap: 10px;
     width: 100%;
 }
