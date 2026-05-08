@@ -1,5 +1,11 @@
-if (localStorage.getItem("dark-mode") === "true") {
+"use strict";
+
+const darkMode = () => {
+  if (localStorage.getItem("dark-mode") === "true") {
     document.documentElement.classList.add("dark");
-} else {
+  } else {
     document.documentElement.classList.remove("dark");
-}
+  }
+};
+
+darkMode();

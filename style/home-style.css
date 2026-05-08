@@ -403,6 +403,7 @@ body:has(#settings-mobile:checked) .settings__menu {
 
 .summary__title {
     margin: 0;
+    font-size: 2rem;
 }
 
 .summary__content {
