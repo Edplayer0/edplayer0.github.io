@@ -61,6 +61,15 @@
               </div>
             </label>
           </li>
+          <li class="settings__item">
+            <label class="settings__label">
+              <span class="material-icons">language</span>
+              <select id="language_selector">
+                <option value="en">English</option>
+                <option value="es">Espanol</option>
+              </select>
+            </label>
+          </li>
         </ul>
       </div>
     </div>
@@ -73,7 +82,7 @@
     <header class="header">
       <div class="header__title">
         <h2>Edgar Ayuso</h2>
-        <h4>Software Developer</h4>
+        <h4 id="header__subtitle">Software Developer</h4>
       </div>
       <button class="header__button">Hire Me</button>
       <label
@@ -93,26 +102,35 @@
             <label for="open-menu" class="material-icons">menu</label>
           </li>
           <li class="list__item">
-            <a href="#skills"><span class="material-icons">bolt</span>Skills</a>
+            <a href="#skills"
+              ><span class="material-icons">bolt</span
+              ><span id="menu__skills">Skills</span></a
+            >
           </li>
           <li class="list__item">
             <a href="#projects"
-              ><span class="material-icons">folder</span>Projects</a
+              ><span class="material-icons">folder</span
+              ><span id="menu__projects">Projects</span></a
             >
           </li>
           <li class="list__item">
             <a href="contact"
-              ><span class="material-icons">message</span>Contact</a
+              ><span class="material-icons">message</span
+              ><span id="menu__contact">Contact</span></a
             >
           </li>
           <li class="list__item">
-            <a href="about"><span class="material-icons">info</span>About Me</a>
+            <a href="about"
+              ><span class="material-icons">info</span
+              ><span id="menu__about">About me</span></a
+            >
           </li>
 
           <li class="list__item item--settings">
             <input type="checkbox" id="open-settings" />
             <label for="open-settings"
-              ><span class="material-icons">settings</span>Settings</label
+              ><span class="material-icons">settings</span
+              ><span id="menu__settings">Settings</span></label
             >
           </li>
         </ul>
@@ -155,9 +173,9 @@
         <main>
           <!-- SUMARY -->
           <section class="box">
-            <h1 class="summary__title">Hello World</h1>
-            <h2 class="summary__subtitle">Who I am?</h2>
-            <p class="summary__content">
+            <h1 class="summary__title" id="summary__title">Hello World</h1>
+            <h2 class="summary__subtitle" id="summary__subtitle">Who I am?</h2>
+            <p class="summary__content" id="summary__content">
               My name is Edgar, and I'm a passionate programmer from Cuba. I'm
               currently 18 years old and started learning to code as a hobby
               when I was 14. Over the years, I've explored web development, API
@@ -320,5 +338,6 @@
     </div>
     <script src="script/darkmode-setter.js"></script>
     <script src="script/settings.js"></script>
+    <script src="script/language.js"></script>
   </body>
 </html>
