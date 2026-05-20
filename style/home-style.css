@@ -477,6 +477,31 @@ body:has(#settings-mobile:checked) .settings__menu {
     box-sizing: border-box;
 }
 
+.more-skills {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.4s height;
+}
+
+.skills:has(#more-skills-input:checked) .more-skills {
+    transition-duration: 0.6s;
+    height: 231px;
+}
+
+
+.more-skills-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    user-select: none;
+}
+
+
+#more-skills-input {
+    display: none;
+}
+
 
 /* ----- PROJECTS ----- */
 
