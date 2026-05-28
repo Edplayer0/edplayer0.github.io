@@ -2,7 +2,7 @@
 
 const languageSelector = document.getElementById("language_selector");
 
-let currentLanguage = document.cookie.split("=")[1].slice(0, 2);
+let currentLanguage = document.cookie ? document.cookie.split("=")[1].slice(0, 2) : null;
 
 const applyLanguage = async () => {
   if (currentLanguage === "en") {
@@ -15,7 +15,7 @@ const applyLanguage = async () => {
 
   for (let elementTranslated in result) {
     let element = document.getElementById(elementTranslated);
-    element.textContent = result[elementTranslated];
+    if (element !== null) element.textContent = result[elementTranslated];
   }
 };
 
@@ -30,11 +30,11 @@ const changeLanguage = (language) => {
 };
 
 if (languageSelector != null) {
-  languageSelector.addEventListener("change", () =>
-    changeLanguage(languageSelector.value)
+  languageSelector.addEventListener("change", (e) =>
+    changeLanguage(e.target.value)
   );
 }
-if (currentLanguage !== undefined && currentLanguage !== "en") {
-  languageSelector.value = currentLanguage;
+if (currentLanguage !== null && currentLanguage !== "en") {
+  if (languageSelector !== null) languageSelector.value = currentLanguage;
   applyLanguage();
 }
