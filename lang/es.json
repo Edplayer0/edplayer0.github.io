@@ -1,11 +1,25 @@
 {
     "header__subtitle": "Desarrollador de Software",
+    "header__button": "Inicio",
     "menu__skills": "Habilidades",
     "menu__projects": "Proyectos",
     "menu__contact": "Contacto",
     "menu__about": "Acerca",
     "menu__settings": "Ajustes",
     "summary__title": "Hola Mundo",
-    "summary__subtitle": "Quien soy?",
-    "summary__content": "Mi nombre es Edgar"
+    "summary__subtitle": "¿Quién soy?",
+    "summary__content": "Mi nombre es Edgar y soy un apasionado programador de Cuba. Actualmente cuento con 18 años de edad y comenzé a estudiar programación como un hobby cuando tenía 14 años. A través de los años, me he sumergido en el desarrollo web, desarrollo de APIs, manejo de bases de datos, automatización, ciencia de datos, machine learning, etcétera. Enfocado en disenar soluciones modernas y seguras, he contruido varios proyectos que han contribuido a mi conocimiento general sobre el desarrollo de software. Para más información, siéntase libre de visitar la página \"Acerca\".",
+    "skills__title": "Habilidades",
+    "skills__content": "Una resumida lista de mis habilidades mas destacadas -- la que está en constante crecimiento. Escoja una para más información.",
+    "projects__title": "Proyectos",
+    "projects__content": "La realización de este conjunto de proyectos me ha dado una base solida en el desarrollo práctico del software, especialmente en lo referente a aplicaciones de escritorio. Gracias a ellos, he aprendido a gestionar interfaces de usuario, manejar datos de forma segura y aplicar prácticas modernas de programación a problemas del mundo real. Cada proyecto representa un desafio diferente y una diferente solucion, lo que me ha ayudado a crecer como Desarrollador. Seleccione alguno para saber todo acerca del mismo.",
+    "contact__title": "Contáctame",
+    "contact__content": "Estoy abierto a trabajo freelance, oportunidades de tiempo parcial o a tiempo completo. Si tiene alguna propuesta de negocio, pregunta o solo quiere conectar, siéntase libre de dejar un mensaje. Puede contactarme a traves de:",
+    "contact__postdata": "¡Construyamos algo genial juntos!",
+    "about__data__title": "Datos Personales",
+    "about__name": "Nombre",
+    "about__age": "Edad",
+    "about__country": "País",
+    "about__social__title": "Redes sociales",
+    "docker-text": "Tengo un conocimiento fundacional de Docker, incluyendo conceptos básicos como contenedores e imágenes. En cambio nunca los he aplicado en producción o en un proyecto real."
 }
