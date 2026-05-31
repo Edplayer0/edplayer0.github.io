@@ -20,7 +20,7 @@
     "about-name": "Nom",
     "about-age": "Âge",
     "about-country": "Pays",
-    "about-social__title": "Réseaux sociaux",
+    "about-social-title": "Réseaux sociaux",
     "progress-header": "Ma progression",
     "progress-content-1": "Il y a quatre ans, j'ai commencé à apprendre la programmation sur des applications mobiles comme Grasshopper et Sololearn, dans lesquelles j'ai suivi plusieurs cours comme HTML, PHP, JavaScript ou Angular. J'ai utilisé ces connaissances pour développer certains projets qui, malheureusement, ne sont plus en ma possession.",
     "progress-content-2": "Je me suis ensuite tourné vers Python, en complétant des cours comme celui de freeCodeCamp. Ainsi, j'ai mis l'accent sur la construction d'applications sécurisées qui appliquent les techniques modernes de cryptographie -- par exemple NodEd, l'un de mes projets personnels. Je suis également passionné par la science des données : j'ai construit une base solide tout en développant NumChat, un autre projet personnel, où j'ai utilisé des bibliothèques comme Pandas et Matplotlib. En explorant ensuite l'intelligence artificielle, l'apprentissage automatique et les algorithmes, que j'ai appliqués à l'entraînement de mes propres modèles.",
