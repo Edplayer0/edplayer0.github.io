@@ -2,7 +2,9 @@
 
 const languageSelector = document.getElementById("language_selector");
 
-let currentLanguage = document.cookie ? document.cookie.split("=")[1].slice(0, 2) : null;
+let currentLanguage = document.cookie
+  ? document.cookie.split("=")[1].slice(0, 2)
+  : null;
 
 const applyLanguage = async () => {
   if (currentLanguage === "en") {
@@ -10,7 +12,7 @@ const applyLanguage = async () => {
     return;
   }
 
-  let request = await fetch(`lang/${currentLanguage}.json`);
+  let request = await fetch(`/lang/${currentLanguage}.json`);
   let result = await request.json();
 
   for (let elementTranslated in result) {
