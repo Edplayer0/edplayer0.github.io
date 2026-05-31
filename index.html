@@ -61,6 +61,17 @@
               </div>
             </label>
           </li>
+          <li class="settings__item">
+            <label class="settings__label">
+              <span class="material-icons">language</span>
+              <select id="language_selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="pt">Português</option>
+                <option value="fr">Français</option>
+              </select>
+            </label>
+          </li>
         </ul>
       </div>
     </div>
@@ -73,7 +84,7 @@
     <header class="header">
       <div class="header__title">
         <h2>Edgar Ayuso</h2>
-        <h4>Software Developer</h4>
+        <h4 id="header-subtitle">Software Developer</h4>
       </div>
       <button class="header__button">Hire Me</button>
       <label
@@ -93,26 +104,35 @@
             <label for="open-menu" class="material-icons">menu</label>
           </li>
           <li class="list__item">
-            <a href="#skills"><span class="material-icons">bolt</span>Skills</a>
+            <a href="#skills"
+              ><span class="material-icons">bolt</span
+              ><span id="menu-skills">Skills</span></a
+            >
           </li>
           <li class="list__item">
             <a href="#projects"
-              ><span class="material-icons">folder</span>Projects</a
+              ><span class="material-icons">folder</span
+              ><span id="menu-projects">Projects</span></a
             >
           </li>
           <li class="list__item">
             <a href="contact"
-              ><span class="material-icons">message</span>Contact</a
+              ><span class="material-icons">message</span
+              ><span id="menu-contact">Contact</span></a
             >
           </li>
           <li class="list__item">
-            <a href="about"><span class="material-icons">info</span>About Me</a>
+            <a href="about"
+              ><span class="material-icons">info</span
+              ><span id="menu-about">About me</span></a
+            >
           </li>
 
           <li class="list__item item--settings">
             <input type="checkbox" id="open-settings" />
             <label for="open-settings"
-              ><span class="material-icons">settings</span>Settings</label
+              ><span class="material-icons">settings</span
+              ><span id="menu-settings">Settings</span></label
             >
           </li>
         </ul>
@@ -155,9 +175,9 @@
         <main>
           <!-- SUMARY -->
           <section class="box">
-            <h1 class="summary__title">Hello World</h1>
-            <h2 class="summary__subtitle">Who I am?</h2>
-            <p class="summary__content">
+            <h1 class="summary__title" id="summary-title">Hello World</h1>
+            <h2 class="summary__subtitle" id="summary-subtitle">Who I am?</h2>
+            <p class="summary__content" id="summary-content">
               My name is Edgar, and I'm a passionate programmer from Cuba. I'm
               currently 18 years old and started learning to code as a hobby
               when I was 14. Over the years, I've explored web development, API
@@ -173,8 +193,8 @@
           <!-- SKILLS -->
 
           <section class="box skills" id="skills">
-            <h2 class="skills__title">Skills</h2>
-            <p class="skills__content">
+            <h2 class="skills__title" id="skills__title">Skills</h2>
+            <p id="skills-content" class="skills__content">
               A small list of my most outstanding skills -- and it's constantly
               growing. Pick any to learn more about it.
             </p>
@@ -256,8 +276,8 @@
 
           <!-- PROJECTS -->
           <section class="box projects" id="projects">
-            <h2 class="projects__title">Projects</h2>
-            <p class="projects__content">
+            <h2 class="projects__title" id="projects-title">Projects</h2>
+            <p id="projects-content" class="projects__content">
               This set of projects has given me a solid foundation in practical
               software development, especially when it comes to building desktop
               applications. Through these projects, I've learned how to manage
@@ -329,5 +349,6 @@
     <script src="script/skills.js"></script>
     <script src="script/darkmode-setter.js"></script>
     <script src="script/settings.js"></script>
+    <script src="script/language.js"></script>
   </body>
 </html>
