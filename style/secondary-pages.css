@@ -49,6 +49,19 @@ body {
     text-wrap: nowrap;
 }
 
+.data__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.data__link:hover .data__content {
+    text-decoration: underline;
+}
+
 
 .certs-wrapper {
     box-sizing: border-box;

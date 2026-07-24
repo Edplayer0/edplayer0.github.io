@@ -25,6 +25,8 @@
     "about-name": "Nome",
     "about-age": "Idade",
     "about-country": "País",
+    "about-cv": "Currículo",
+    "about-cv-download": "Baixar PDF",
     "about-social-title": "Redes sociais",
     "progress-header": "Meu progresso",
     "progress-content-1": "Há quatro anos, comecei a aprender programação em aplicações móveis como Grasshopper e Sololearn, nas quais completei vários cursos como HTML, PHP, JavaScript ou Angular. Utilizei esse conhecimento para desenvolver alguns projetos que infelizmente já não estão em meu poder.",

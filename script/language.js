@@ -19,6 +19,11 @@ const applyLanguage = async () => {
     let element = document.getElementById(elementTranslated);
     if (element !== null) element.textContent = result[elementTranslated];
   }
+
+  let cvLink = document.getElementById("about-cv-link");
+  if (cvLink) {
+    cvLink.href = currentLanguage === "es" ? "assets/CV-es.pdf" : "assets/CV-en.pdf";
+  }
 };
 
 const changeLanguage = (language) => {
