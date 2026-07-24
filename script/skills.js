@@ -1,19 +1,24 @@
 "use strict";
 
-const showMore = document.getElementById("show-more");
+const showMoreBtn = document.getElementById("show-more");
+const showMoreText = document.getElementById("show-more-text");
+const showLessText = document.getElementById("show-less-text");
+const showMoreIcon = showMoreBtn.querySelector(".material-icons");
 
 let more = 1;
 
-showMore.addEventListener("click", (e) => {
+showMoreBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (more % 2 === 0) {
-    showMore.childNodes[1].textContent = "arrow_downward";
-    showMore.childNodes[2].textContent = "Show more";
-    showMore.childNodes[3].checked = false;
+    showMoreIcon.textContent = "arrow_downward";
+    showMoreText.style.display = "inline";
+    showLessText.style.display = "none";
+    showMoreBtn.childNodes[5].checked = false;
   } else {
-    showMore.childNodes[1].textContent = "arrow_upward";
-    showMore.childNodes[2].textContent = "Show less";
-    showMore.childNodes[3].checked = true;
+    showMoreIcon.textContent = "arrow_upward";
+    showMoreText.style.display = "none";
+    showLessText.style.display = "inline";
+    showMoreBtn.childNodes[5].checked = true;
   }
   more++;
 });
