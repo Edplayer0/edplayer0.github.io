@@ -274,11 +274,11 @@
 } 
 
 /* open settings from side-bar */
-body:has(#open-settings:checked) #settings__background {
+body:has(#open-settings-checkbox:checked) #settings__background {
     display: block;
 }
 
-body:has(#open-settings:checked) .settings__menu {
+body:has(#open-settings-checkbox:checked) .settings__menu {
     animation: settings-appear 0.7s both;
     bottom: 40px;
     left: 50px;
@@ -312,25 +312,25 @@ body:has(#open-settings:checked) .settings__menu {
 
 /* LINKS SHOWN */
 
-.side-menu:has(#open-menu:checked) {
+.side-menu:has(#open-menu-checkbox:checked) {
     transition: 0.6s width;
     width: 150px
 }
 
 /* shadow effect */
-.side-menu:has(#open-menu:checked) .list__item:hover::after {
+.side-menu:has(#open-menu-checkbox:checked) .list__item:hover::after {
     bottom: -20px;
     border-top-right-radius: 10px;
     box-shadow: 4px -4px 2px var(--bg-color);
 }
 
-#open-menu {
+#open-menu-checkbox {
     display: none;
 }
 
 /* ----- MOBILE MENU ----- */
 
-#mobile-menu__checkbox {
+#mobile-menu-checkbox {
     display: none;
 }
 
@@ -342,7 +342,7 @@ body:has(#open-settings:checked) .settings__menu {
     user-select: none;
 }
 
-body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
+body:has(#mobile-menu-checkbox:checked) .header__mobile-menu {
     transform: rotate(-90deg);
     transition: transform 0.5s;
 } 
@@ -363,7 +363,7 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
     z-index: 10;
 }
 
-.mobile-menu:has(#mobile-menu__checkbox:checked) {
+.mobile-menu:has(#mobile-menu-checkbox:checked) {
     height: 240px;
     border-bottom: 3px solid var(--text-color);
 }
@@ -395,17 +395,17 @@ body:has(#mobile-menu__checkbox:checked) .header__mobile-menu {
 
 /* ----- MOVILE MENU SETTINGS ----- */
 
-#settings-mobile {
+#settings-mobile-checkbox {
     display: none;
 }
 
 /* open settings from mobile menu */
 
-body:has(#settings-mobile:checked) #settings__background {
+body:has(#settings-mobile-checkbox:checked) #settings__background {
     display: block;
 }
 
-body:has(#settings-mobile:checked) .settings__menu {
+body:has(#settings-mobile-checkbox:checked) .settings__menu {
     animation: settings-appear 1s;
 }
 
@@ -503,7 +503,7 @@ body:has(#settings-mobile:checked) .settings__menu {
     transition: 0.4s height;
 }
 
-.skills:has(#more-skills-input:checked) .more-skills {
+.skills:has(#more-skills-checkbox:checked) .more-skills {
     transition-duration: 0.6s;
     height: 231px;
 }
@@ -518,7 +518,7 @@ body:has(#settings-mobile:checked) .settings__menu {
 }
 
 
-#more-skills-input {
+#more-skills-checkbox {
     display: none;
 }
 

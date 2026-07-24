@@ -5,8 +5,8 @@
 document
   .getElementById("settings__background")
   .addEventListener("click", () => {
-    document.getElementById("open-settings").checked = false;
-    document.getElementById("settings-mobile").checked = false;
+    document.getElementById("open-settings-checkbox").checked = false;
+    document.getElementById("settings-mobile-checkbox").checked = false;
   });
 
 // DON'T DISSAPPEAR WHEN CLICKING INSIDE

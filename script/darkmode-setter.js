@@ -1,6 +1,6 @@
 "use strict";
 
-const toggle = document.getElementById("dark-mode");
+const toggle = document.getElementById("dark-mode-checkbox");
 
 if (localStorage.getItem("dark-mode") === "true") {
   toggle.checked = true;
