@@ -541,7 +541,8 @@ body:has(#settings-mobile:checked) .settings__menu {
     grid-template-areas: 
     "noted blueonda"
     "personal-page personal-page"
-    "numchat tictactoe";
+    "numchat tictactoe"
+    "notedweb notedweb";
     gap: 10px;
     width: 100%;
 }
